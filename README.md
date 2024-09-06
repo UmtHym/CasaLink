@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# CasaLink
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CasaLink is a house marketplace platform that enables users to list their properties for rent or sale. It offers features like special offer listings, geolocation-based map views, and user authentication.
 
-## Available Scripts
+The project uses **Firebase v9** for backend functionalities, built in authentication and Google OAuth, database management, and image storage. The frontend is developed using **React**, while **Leaflet.js** is used for geolocation.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+### User Registration & Authentication
+- Sign up and log in with email/password
+- Google OAuth for quick sign-in
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Property Listings
+- List homes for **rent** or **sale**
+- Mark listings as **special offers**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Map Integration
+- View property locations on an interactive map using **Leaflet.js**
 
-### `npm test`
+### Image Uploads
+- Upload and store property images with **Firebase Storage**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Real-time Database
+- Manage and retrieve property listings with **Firebase Realtime Database**
 
-### `npm run build`
+## Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend**: React
+- **Backend**: Firebase v9
+  - **Authentication**: Firebase Authentication (including Google OAuth)
+  - **Database**: Firebase Realtime Database
+  - **Storage**: Firebase Storage
+- **Geolocation**: Leaflet.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+   git clone https://github.com/yourusername/CasaLink.git
 
-### `npm run eject`
+2.	Navigate to the project directory: 
+    cd CasaLink
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3.	Install dependencies:
+    npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4.	Set up Firebase:
+	•	Create a project in the Firebase console.
+	•	Enable Authentication, Realtime Database, and Storage.
+	•	Add your Firebase credentials to an .env file:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    REACT_APP_FIREBASE_API_KEY=your-api-key
+    REACT_APP_FIREBASE_AUTH_DOMAIN=your-auth-domain
+    REACT_APP_FIREBASE_PROJECT_ID=your-project-id
+    REACT_APP_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+    REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+    REACT_APP_FIREBASE_APP_ID=your-app-id
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5.	Start the development server:
+    npm start
 
-## Learn More
+    Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+	1.	Register or log in using email/password or Google OAuth.
+	2.	List a property for rent or sale and upload images.
+	3.	View properties on a map using Leaflet’s geolocation.
+	4.	Mark a listing as a special offer to highlight it.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
+Feel free to fork this project and submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
