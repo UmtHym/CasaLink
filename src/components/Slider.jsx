@@ -65,7 +65,7 @@ function Slider() {
                 }}
                 className="swiperSlideDiv"
               >
-                <p className="swiperslideText">{data.name}</p>
+                <p className="swiperSlideText">{data.name}</p>
                 <p className="swiperSlidePrice">
                   ${data.discountedPrice ?? data.regularPrice}{" "}
                   {data.type === "rent" && "/ month"}
