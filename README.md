@@ -1,74 +1,123 @@
 # CasaLink
 
-CasaLink is a house marketplace platform that enables users to list their properties for rent or sale. It offers features like special offer listings, geolocation-based map views, and user authentication.
+A modern real estate marketplace built with React and Firebase
 
-The project uses **Firebase v9** for backend functionalities, built in authentication and Google OAuth, database management, and image storage. The frontend is developed using **React**, while **Leaflet.js** is used for geolocation.
+## Overview
+
+CasaLink is a full-featured real estate platform that enables users to list and discover properties for rent or sale. Built with Vite and Firebase v9, it offers a seamless experience for property listing, geolocation mapping, and user authentication.
 
 ## Features
 
-### User Registration & Authentication
-- Sign up and log in with email/password
-- Google OAuth for quick sign-in
-
-### Property Listings
-- List homes for **rent** or **sale**
-- Mark listings as **special offers**
-
-### Map Integration
-- View property locations on an interactive map using **Leaflet.js**
-
-### Image Uploads
-- Upload and store property images with **Firebase Storage**
-
-### Real-time Database
-- Manage and retrieve property listings with **Firebase Realtime Database**
+- 🏠 Property Listings (Rent/Sale)
+- 🔍 Interactive Map Integration
+- 🎯 Special Offer Listings
+- 📸 Multiple Image Uploads
+- 🔐 User Authentication
+- 📍 Geolocation Services
+- 🎨 Modern UI/UX Design
 
 ## Tech Stack
 
-- **Frontend**: React
-- **Backend**: Firebase v9
-  - **Authentication**: Firebase Authentication (including Google OAuth)
-  - **Database**: Firebase Realtime Database
-  - **Storage**: Firebase Storage
-- **Geolocation**: Leaflet.js
+- **Frontend Framework:** React with Vite
+- **Backend Services:** Firebase v9
+  - Authentication (Email/Password & Google OAuth)
+  - Cloud Firestore
+  - Storage
+- **Map Integration:** Leaflet.js
+- **Build Tool:** Vite
 
-## Installation
+## Getting Started
 
-1. Clone the repository:
-   git clone https://github.com/yourusername/CasaLink.git
+### Prerequisites
 
-2.	Navigate to the project directory: 
-    cd CasaLink
+- Node.js 14.18+ or 16+
+- npm or yarn
+- Firebase account
 
-3.	Install dependencies:
-    npm install
+### Installation
 
-4.	Set up Firebase:
-	•	Create a project in the Firebase console.
-	•	Enable Authentication, Realtime Database, and Storage.
-	•	Add your Firebase credentials to an .env file:
+1. Clone the repository
 
-    REACT_APP_FIREBASE_API_KEY=your-api-key
-    REACT_APP_FIREBASE_AUTH_DOMAIN=your-auth-domain
-    REACT_APP_FIREBASE_PROJECT_ID=your-project-id
-    REACT_APP_FIREBASE_STORAGE_BUCKET=your-storage-bucket
-    REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
-    REACT_APP_FIREBASE_APP_ID=your-app-id
+```bash
+git clone https://github.com/yourusername/CasaLink.git
+cd CasaLink
 
-5.	Start the development server:
-    npm start
+```
 
-    Usage
+2. Install dependencies
 
-	1.	Register or log in using email/password or Google OAuth.
-	2.	List a property for rent or sale and upload images.
-	3.	View properties on a map using Leaflet’s geolocation.
-	4.	Mark a listing as a special offer to highlight it.
+```bash
+npm install
+# or
+yarn
+```
+
+3. Configure environment variables Create a .env.local file: \
+
+   ``` .env
+
+	VITE_FIREBASE_API_KEY=your-api-key \
+	VITE_FIREBASE_AUTH_DOMAIN=your-auth-domain
+	VITE_FIREBASE_PROJECT_ID=your-project-id
+	VITE_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+	VITE_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
+	VITE_FIREBASE_APP_ID=your-app-id
+	```
+
+## Development Scripts
+
+```bash
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## Next Tasks
+
+- [ ] Migrate from Create React App to Vite
+- [ ] Install Vite and required plugins
+- [ ] Update configuration files
+- [ ] Modify environment variables
+- [ ] Update import statements
+- [ ] Test and verify all features
+
+- [ ] Update dependencies to latest versions
+- [ ] Implement proper error handling
+- [ ] Add loading states
+- [ ] Improve mobile responsiveness
+- [ ] Add unit tests
+- [ ] Implement CI/CD pipeline
+
+### Firebase Setup
+
+1. Create a project in Firebase Console
+2. Enable Authentication
+
+   - Set up Email/Password sign-in
+   - Configure Google OAuth
+
+3. Set up Cloud Firestore
+4. Enable Storage for images
 
 ## Contributing
 
-Feel free to fork this project and submit a pull request.
+# Fork the repository
 
-## License
+Create your feature branch (git checkout -b feature/AmazingFeature)
+Commit your changes (git commit -m 'Add some AmazingFeature')
+Push to the branch (git push origin feature/AmazingFeature)
+Open a Pull Request
 
-This project is licensed under the MIT License.
+# License
+
+This project is licensed under the MIT License - see the LICENSE file for details
+
+# Contact
+
+Umit Hayim - @umthym
+Project Link: https://github.com/UmtHym/CasaLink
