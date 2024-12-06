@@ -78,14 +78,14 @@ npm run preview
 ```
 
 ## Next Tasks
-- [ ] Migrate from Create React App to Vite
-  - [ ] Install Vite and required plugins
-  - [ ] Update configuration files
-  - [ ] Modify environment variables (REACT_APP_ to VITE_)
-  - [ ] Update import statements
-  - [ ] Test and verify all features
-- [ ] Update outdated dependencies
-  - [ ] Resolve SVG handling with Vite
+- [x] Migrate from Create React App to Vite
+  - [x] Install Vite and required plugins
+  - [x] Update configuration files
+  - [x] Modify environment variables (REACT_APP_ to VITE_)
+  - [x] Update import statements
+  - [x] Test and verify all features
+- [x] Update outdated dependencies
+  - [x] Resolve SVG handling with Vite
   - [ ] Update PostCSS dependencies
   - [ ] Resolve any compatibility issues
 - [ ] UI/UX Improvements
@@ -98,8 +98,8 @@ npm run preview
   - [ ] Add clustering for multiple properties
   - [ ] Implement better map interaction features
 - [ ] Performance Optimization
-  - [ ] Utilize Vite's fast refresh
-  - [ ] Improve build times
+  - [x] Utilize Vite's fast refresh
+  - [x] Improve build times
   - [ ] Optimize asset loading
 
 ### Firebase Setup
