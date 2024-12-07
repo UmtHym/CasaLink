@@ -5,7 +5,7 @@ import { getDoc, doc } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 import { db } from "../firebase.config";
 import Spinner from "../components/Spinner";
-import shareIcon from "../assets/svg/shareIcon.svg";
+import shareIcon from "../assets/svg/shareIcon.svg?react";
 
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -57,7 +57,7 @@ function Listing() {
               style={{
                 background: `url(${listing.imgUrls[index]}) center no-repeat`,
                 backgroundSize: "cover",
-                minHeight: '20rem',
+                minHeight: "20rem",
               }}
               className="swiperSlideDiv"
             ></div>

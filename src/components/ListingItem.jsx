@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { ReactComponent as DeleteIcon } from "../assets/svg/deleteIcon.svg";
-import { ReactComponent as EditIcon } from "../assets/svg/editIcon.svg";
-import bedIcon from "../assets/svg/bedIcon.svg";
-import bathtubIcon from "../assets/svg/bathtubIcon.svg";
+import DeleteIcon from "../assets/svg/deleteIcon.svg?react";
+import EditIcon from "../assets/svg/editIcon.svg?react";
+import bedIcon from "../assets/svg/bedIcon.svg?react";
+import bathtubIcon from "../assets/svg/bathtubIcon.svg?react";
 
 function ListingItem({ listing, id, onDelete, onEdit }) {
   return (
@@ -56,7 +56,7 @@ function ListingItem({ listing, id, onDelete, onEdit }) {
         />
       )}
 
-      {onEdit && <EditIcon className="editIcon" onClick={()=> onEdit(id)} />}
+      {onEdit && <EditIcon className="editIcon" onClick={() => onEdit(id)} />}
     </li>
   );
 }

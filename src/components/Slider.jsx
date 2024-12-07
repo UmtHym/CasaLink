@@ -42,8 +42,8 @@ function Slider() {
     return <Spinner />;
   }
 
-  if(listings.length === 0){
-    return <></>
+  if (listings.length === 0) {
+    return <></>;
   }
 
   return (
