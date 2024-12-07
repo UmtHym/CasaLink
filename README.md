@@ -42,30 +42,77 @@ CasaLink is a full-featured real estate platform that enables users to list and 
 git clone https://github.com/yourusername/CasaLink.git
 cd CasaLink
 
-3.	Install dependencies:
-    npm install
+```
 
-4.	Set up Firebase:
-	•	Create a project in the Firebase console.
-	•	Enable Authentication, Realtime Database, and Storage.
-	•	Add your Firebase credentials to an .env file:
+2. Install dependencies
 
-    REACT_APP_FIREBASE_API_KEY=your-api-key
-    REACT_APP_FIREBASE_AUTH_DOMAIN=your-auth-domain
-    REACT_APP_FIREBASE_PROJECT_ID=your-project-id
-    REACT_APP_FIREBASE_STORAGE_BUCKET=your-storage-bucket
-    REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
-    REACT_APP_FIREBASE_APP_ID=your-app-id
+```bash
+npm install
+# or
+yarn
+```
 
-5.	Start the development server:
-    npm start
+3. Configure environment variables Create a .env.local file: \
 
-    Usage
+   ```.env
 
-	1.	Register or log in using email/password or Google OAuth.
-	2.	List a property for rent or sale and upload images.
-	3.	View properties on a map using Leaflet’s geolocation.
-	4.	Mark a listing as a special offer to highlight it.
+   VITE_FIREBASE_API_KEY=your-api-key \
+   VITE_FIREBASE_AUTH_DOMAIN=your-auth-domain
+   VITE_FIREBASE_PROJECT_ID=your-project-id
+   VITE_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+   VITE_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
+   VITE_FIREBASE_APP_ID=your-app-id
+   ```
+
+## Development Scripts
+
+```bash
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## Next Tasks
+
+- [x] Migrate from Create React App to Vite
+  - [x] Install Vite and required plugins
+  - [x] Update configuration files
+  - [x] Modify environment variables (REACT*APP* to VITE\_)
+  - [x] Update import statements
+  - [x] Test and verify all features
+- [x] Update outdated dependencies
+  - [x] Resolve SVG handling with Vite
+  - [ ] Update PostCSS dependencies
+  - [ ] Resolve any compatibility issues
+- [ ] UI/UX Improvements
+  - [ ] Refactor Header into a standalone component
+  - [ ] Implement dynamic page titles with proper routing logic
+  - [ ] Add responsive hamburger menu for mobile navigation
+  - [ ] Integrate modern UI framework (DaisyUI/Tailwind)
+- [ ] Map Integration Enhancement
+  - [ ] Improve property location visualization on map
+  - [ ] Add clustering for multiple properties
+  - [ ] Implement better map interaction features
+- [ ] Performance Optimization
+  - [x] Utilize Vite's fast refresh
+  - [x] Improve build times
+  - [ ] Optimize asset loading
+
+### Firebase Setup
+
+1. Create a project in Firebase Console
+2. Enable Authentication
+
+   - Set up Email/Password sign-in
+   - Configure Google OAuth
+
+3. Set up Cloud Firestore
+4. Enable Storage for images
 
 ## Contributing
 
