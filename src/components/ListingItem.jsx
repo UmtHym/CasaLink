@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import DeleteIcon from "../assets/svg/deleteIcon.svg?react";
 import EditIcon from "../assets/svg/editIcon.svg?react";
-import bedIcon from "../assets/svg/bedIcon.svg?react";
-import bathtubIcon from "../assets/svg/bathtubIcon.svg?react";
+import BedIcon from "../assets/svg/bedIcon.svg?react";
+import BathtubIcon from "../assets/svg/bathtubIcon.svg?react";
 
 function ListingItem({ listing, id, onDelete, onEdit }) {
   return (
@@ -32,13 +32,13 @@ function ListingItem({ listing, id, onDelete, onEdit }) {
             {listing.type === "rent" && " / Month"}
           </p>
           <div className="categoryListingInfoDiv">
-            <img src={bedIcon} alt="bed" />
+            <BedIcon width="24" height="24" />
             <p className="categoryListingInfoText">
               {listing.bedrooms > 1
                 ? `${listing.bedrooms} Bedrooms`
                 : "1 Bedroom"}
             </p>
-            <img src={bathtubIcon} alt="bath" />
+            <BathtubIcon width="24" height="24" />
             <p className="categoryListingInfoText">
               {listing.bathrooms > 1
                 ? `${listing.bathrooms} Bathrooms`
@@ -51,7 +51,7 @@ function ListingItem({ listing, id, onDelete, onEdit }) {
       {onDelete && (
         <DeleteIcon
           className="removeIcon"
-          fill="rgb(231, 76, 60"
+          fill="rgb(231, 76, 60)"
           onClick={() => onDelete(listing.id, listing.name)}
         />
       )}

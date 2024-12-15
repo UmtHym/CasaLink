@@ -15,8 +15,8 @@ import { db } from "../firebase.config";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import ListingItem from "../components/ListingItem";
-import arrowRight from "../assets/svg/keyboardArrowRightIcon.svg?react";
-import homeIcon from "../assets/svg/homeIcon.svg?react";
+import ArrowRight from "../assets/svg/keyboardArrowRightIcon.svg?react";
+import HomeIcon from "../assets/svg/homeIcon.svg?react";
 
 function Profile() {
   const auth = getAuth();
@@ -135,7 +135,7 @@ function Profile() {
               id="name"
               className={!changeDetails ? "profileName" : "profileNameActive"}
               disabled={!changeDetails}
-              value={name}
+              value="name"
               onChange={onChange}
             />
             <input
@@ -150,9 +150,9 @@ function Profile() {
         </div>
 
         <Link to="/create-listing" className="createListing">
-          <img src={homeIcon} alt="home" />
+          <HomeIcon width="24" height="24" />
           <p>Sell or rent your home</p>
-          <img src={arrowRight} alt="arrow right" />
+          <ArrowRight width="24" height="24" />
         </Link>
 
         {!loading && listings?.length > 0 && (
