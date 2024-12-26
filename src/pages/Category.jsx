@@ -17,7 +17,7 @@ import ListingItem from "../components/ListingItem";
 function Category() {
   const [listings, setListings] = useState();
   const [loading, setLoading] = useState(true);
-  const [lastFetchedListing, setLastFetchedListing] = useState(null)
+  const [lastFetchedListing, setLastFetchedListing] = useState(null);
 
   const params = useParams();
 
@@ -38,8 +38,8 @@ function Category() {
         //Execute query
         const querySnap = await getDocs(q);
 
-        const lastVisible = querySnap.docs[querySnap.docs.length - 1]
-        setLastFetchedListing(lastVisible)
+        const lastVisible = querySnap.docs[querySnap.docs.length - 1];
+        setLastFetchedListing(lastVisible);
 
         const listings = [];
 
@@ -77,8 +77,8 @@ function Category() {
       //Execute query
       const querySnap = await getDocs(q);
 
-      const lastVisible = querySnap.docs[querySnap.docs.length - 1]
-      setLastFetchedListing(lastVisible)
+      const lastVisible = querySnap.docs[querySnap.docs.length - 1];
+      setLastFetchedListing(lastVisible);
 
       const listings = [];
 
@@ -89,7 +89,7 @@ function Category() {
         });
       });
 
-      setListings((prevState)=> [...prevState, ...listings]);
+      setListings((prevState) => [...prevState, ...listings]);
       setLoading(false);
     } catch (error) {
       toast.error("Couldn't fetch listings");
@@ -99,7 +99,7 @@ function Category() {
   return (
     <div className="category">
       <header>
-        <p className="pageHeader">
+        <p className="text-4xl font-extrabold">
           {params.categoryName === "rent"
             ? "Places for rent"
             : "Places for sale"}
@@ -125,7 +125,9 @@ function Category() {
           <br />
           <br />
           {lastFetchedListing && (
-            <p className="loadMore" onClick={onFetchMoreListings}>Load More</p>
+            <p className="loadMore" onClick={onFetchMoreListings}>
+              Load More
+            </p>
           )}
         </>
       ) : (

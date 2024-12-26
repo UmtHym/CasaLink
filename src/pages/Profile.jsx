@@ -108,7 +108,7 @@ function Profile() {
   return (
     <div className="profile">
       <header className="profileHeader">
-        <p className="pageHeader">My Profile</p>
+        <p className="text-4xl font-extrabold">My Profile</p>
         <button type="button" className="logOut" onClick={onLogout}>
           Logout
         </button>
