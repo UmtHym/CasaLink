@@ -250,7 +250,7 @@ function EditListing() {
   return (
     <div className="profile">
       <header>
-        <p className="pageHeader">Edit Listing</p>
+        <p className="text-4xl font-extrabold">Edit Listing</p>
       </header>
 
       <main>

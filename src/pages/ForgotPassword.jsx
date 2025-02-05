@@ -22,7 +22,7 @@ function ForgotPassword() {
   return (
     <div className="pageContainer">
       <header>
-        <p className="pageHeader">Forgot Password</p>
+        <p className="text-4xl font-extrabold">Forgot Password</p>
       </header>
       <main>
         <form onSubmit={onSubmit}>

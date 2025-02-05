@@ -16,7 +16,7 @@ import ListingItem from "../components/ListingItem";
 function Offers() {
   const [listings, setListings] = useState();
   const [loading, setLoading] = useState(true);
-  const [lastFetchedListing, setLastFetchedListing] = useState(null)
+  const [lastFetchedListing, setLastFetchedListing] = useState(null);
 
   useEffect(() => {
     const fetchListings = async () => {
@@ -35,8 +35,8 @@ function Offers() {
         //Execute query
         const querySnap = await getDocs(q);
 
-        const lastVisible = querySnap.docs[querySnap.docs.length - 1]
-        setLastFetchedListing(lastVisible)
+        const lastVisible = querySnap.docs[querySnap.docs.length - 1];
+        setLastFetchedListing(lastVisible);
 
         const listings = [];
 
@@ -73,8 +73,8 @@ function Offers() {
       //Execute query
       const querySnap = await getDocs(q);
 
-      const lastVisible = querySnap.docs[querySnap.docs.length - 1]
-      setLastFetchedListing(lastVisible)
+      const lastVisible = querySnap.docs[querySnap.docs.length - 1];
+      setLastFetchedListing(lastVisible);
 
       const listings = [];
 
@@ -85,7 +85,7 @@ function Offers() {
         });
       });
 
-      setListings((prevState)=> [...prevState, ...listings]);
+      setListings((prevState) => [...prevState, ...listings]);
       setLoading(false);
     } catch (error) {
       toast.error("Couldn't fetch listings");
@@ -95,9 +95,7 @@ function Offers() {
   return (
     <div className="category">
       <header>
-        <p className="pageHeader">
-          Offers
-        </p>
+        <p className="text-4xl font-extrabold">Offers</p>
       </header>
 
       {loading ? (
@@ -119,7 +117,9 @@ function Offers() {
           <br />
           <br />
           {lastFetchedListing && (
-            <p className="loadMore" onClick={onFetchMoreListings}>Load More</p>
+            <p className="loadMore" onClick={onFetchMoreListings}>
+              Load More
+            </p>
           )}
         </>
       ) : (

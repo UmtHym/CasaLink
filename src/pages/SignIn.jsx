@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import OAuth from "../components/OAuth";
 import ArrowRightIcon from "../assets/svg/keyboardArrowRightIcon.svg?react";
-import visibilityIcon from "../assets/svg/visibilityIcon.svg?react";
+import VisibilityIcon from "../assets/svg/visibilityIcon.svg?react";
 
 function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
@@ -47,7 +47,7 @@ function SignIn() {
     <>
       <div className="pageContainer">
         <header>
-          <p className="pageHeader">Welcome Back!</p>
+          <p className="text-4xl font-extrabold">Welcome Back!</p>
         </header>
 
         <form onSubmit={onSubmit}>
@@ -70,11 +70,11 @@ function SignIn() {
               onChange={onChange}
             />
 
-            <img
-              src={visibilityIcon}
-              alt="show password"
+            <VisibilityIcon
               className="showPassword"
               onClick={() => setShowPassword((prevState) => !prevState)}
+              width="24px"
+              height="24px"
             />
           </div>
 
